@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "canarytrap"
+version = "0.1.0"
+description = "Self-hosted canary tokens: web bugs, fake AWS keys and .env baits that alert you the moment someone touches them."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "ThorrijaDEV" }]
+requires-python = ">=3.9"
+classifiers = [
+    "Environment :: Web Environment",
+    "Topic :: Security",
+]
+dependencies = []
+
+[project.scripts]
+canarytrap = "canarytrap.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/canarytrap"]
